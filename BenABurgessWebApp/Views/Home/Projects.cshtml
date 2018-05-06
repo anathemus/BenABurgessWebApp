@@ -1,0 +1,167 @@
+﻿
+@{
+    ViewBag.Title = "Benjamin's Projects";
+}
+
+<div class="jumbotron">
+    <div class="container">
+        <img src="~/Content/Photos/the-wizard.jpg" class="img-rounded" id="projectsImg" />
+        <a name="top"><br /></a>
+        <h2>Projects</h2>
+    </div>
+</div>
+<div class="container-fluid">
+    <!-- Row of columns -->
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-pills">
+                <li class="nav-item btn btn-outline-info pill-btn"><a href="#PutItDown" class="nav-link">Put It Down</a></li>
+                <li class="nav-item btn btn-outline-info pill-btn"><a href="#CS50Finance" class="nav-link">CS50 Finance</a></li>
+                <li class="nav-item btn btn-outline-secondary pill-btn"><a href="#Mashup" class="nav-link disabled">Mashup</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row" id="PutItDown">
+        <div class="col-xs-3 col-md-5">
+            <br />
+            <br />
+            <div class="padded-btn">
+                <ul class="nav nav-pills padded-btn">
+                    <li class="nav-item"><a href="#top" class="nav-link btn btn-outline-info">Top <span class="fa fa-caret-square-up"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-2">
+            <br />
+            <br />
+            <img src="~/Content/Photos/PID.png" class="img-rounded img-fluid" />
+        </div>
+        <div class="col-xs-3 col-md-2">
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <a><br /></a>
+            <h2 class="title">Put It Down</h2>
+            <blockquote>
+                <p>
+                    At any given daylight moment across America, approximately 660,000
+                    drivers are using cell phones or manipulating electronic devices while
+                    driving, a number that has held steady since 2010.
+                </p>
+                <footer>http://www-nrd.nhtsa.dot.gov/Pubs/811719.pdf</footer>
+            </blockquote>
+            <br />
+            <p>
+                The Put It Down app was created and designed to help users deter themselves
+                from picking up or using their smartphone while driving.
+            </p><br />
+            <h3>How it works:</h3><br />
+            <ol style="list-style-type: lower-roman;">
+                <li>Open the app</li>
+                <li>New Drive</li>
+                <li>Rest phone somewhere relatively flat and where it won't move much</li>
+                <li>Press Begin Drive</li>
+                <li>Begin Driving</li>
+            </ol><br />
+            <p>
+                The phone checks the angle of the phone each second against its angle the
+                previous second. If the angle change is more than 30 degrees, it sounds
+                an alert, vibrates the phone, and pins where the "pick-up" occurred in
+                <span class="label label-default">MapKit</span>. At the end of the drive,
+                the user may save the drive which then gets stored in the iPhone's <span class="label label-default">CoreData</span> for later retrieval.
+            </p>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 col-md-5">
+        </div>
+        <div class="col-xs-6 col-md-2">
+            <a href="https://appsto.re/us/ItP-_.i">
+                <img src="~/Content/Photos/Download_on_the_App_Store_Badge_US-UK_135x40.svg"
+                     class="img-fluid" />
+            </a><br />
+            <a href="https://github.com/anathemus/FinalProject/tree/master/Put%20It%20Down%202.0/Put%20It%20Down/Put%20It%20Down"
+               target="_blank">
+                <img src="~/Content/Photos/github.png" class="img-fluid github"
+                     id="github1" onmouseover="colorBorder(1);" onmouseout="clearBorder(1)" />
+            </a>
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="col-xs-3 col-md-5">
+        </div>
+    </div>
+    <div class="row inverse" id="CS50Finance">
+        <div class="col-xs-1 col-md-4">
+            <br />
+            <br />
+        </div>
+        <div class="col-xs-10 col-md-4">
+            <br />
+            <br />
+        </div>
+        <div class="col-xs-1 col-md-4">
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="row inverse">
+        <div class="col-xs-1 col-md-4">
+            <div class="padded-btn">
+                <ul class="nav nav-pills padded-btn">
+                    <li class="nav-item"><a href="#top" class="nav-link btn btn-outline-info">Top <span class="fa fa-caret-square-up"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-10 col-md-4">
+            <br />
+            <img src="~/Content/Photos/nyse.JPG" class="img-fluid" />
+            <br />
+        </div>
+        <div class="col-xs-1 col-md-4">
+        </div>
+    </div>
+        <div class="row inverse">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <h2 class="title">CS50 Finance</h2>
+                <br />
+                <p>
+                    This is CS50 Finance! A web based tool with which a user can create
+                    a user account, look up stock quotes with realtime data from Yahoo!
+                    Finance, "buy" and "sell" stocks, create a portfolio they can check
+                    back in on at any time. It's reminiscent of the grade-school stock
+                    market game (and still fun).
+                </p>
+                <br />
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <div class="row inverse">
+            <div class="col-xs-3 col-md-5">
+            </div>
+            <div class="col-xs-6 col-md-2">
+                @Html.ActionLink("Enter CS50 Finance Here", "Index", "Financial", null, new { @class = "btn btn-primary" })
+                <br />
+                <br />
+                <a href="https://github.com/anathemus/CS50/tree/master/pset7"
+                   target="_blank">
+                    <img src="~/Content/Photos/github.png" class="img-fluid github"
+                         id="github2" onmouseover="colorBorder(2);" onmouseout="clearBorder(2)" />
+                </a>
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+</div>

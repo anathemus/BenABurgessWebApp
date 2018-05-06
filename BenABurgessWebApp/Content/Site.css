@@ -1,4 +1,30 @@
-﻿body {
+﻿@font-face
+{
+    font-family: 'Benguiat Bold';
+    src: url('Fonts/Benguiat-Bold.ttf');
+}
+
+
+@font-face
+{
+    font-family: 'Perfect DOS VGA';
+    src: url('Fonts/Perfect DOS VGA 437 Win.ttf');
+}
+
+@font-face
+{
+    font-family: 'Deutsch Gothic';
+    src: url('Fonts/Deutsch.ttf');
+}
+
+@font-face
+{
+    font-family: 'Dollar Bill';
+    src: url('Fonts/Dollar Bill.otf');
+    src: url('Fonts/Dollar Bill.ttf');
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -20,5 +46,222 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 80%;
+}
+
+/*
+Custom CSS in addition to bootstrap to customize appearance further.
+*/
+
+.jumbotron .container
+{
+   padding-top: 5%;
+   text-align: center;
+}
+
+footer
+{
+    text-align: center;
+}
+
+.skill
+{
+    height: 60px;
+    width: auto;
+}
+
+#skillsTable
+{
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+}
+
+#skillsTable tr td
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#skillsTable tr th
+{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+#skillsHeading
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#additionalSkills
+{
+    text-align: center;
+}
+
+#ordered
+{
+    background-color: #202020;
+    color: white;
+}
+
+ol
+{
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+ol li
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.jumbotron
+{
+    background-color: #202020;
+    color: white;
+}
+
+#feedbackImg
+{
+    opacity: 0.25;
+}
+
+#educationImg
+{
+    height: auto;
+    width: 40%;
+    opacity: 0.25;
+}
+
+#projectsImg
+{
+    height: auto;
+    width: 40%;
+    opacity: 0.4;
+}
+
+/* if the input is valid, make it green, with a green checkmark graphic */
+.form-control:required:valid
+{
+      background-color: rgb(220, 255, 220);
+      background-image: url("/photos/go.png");
+      background-position: center right;
+      background-repeat: no-repeat;
+}
+
+
+/* if the input is invalid, make it red with a red stop sign x graphic */
+.form-control:focus:required:invalid
+{
+      background-color: rgb(255, 220, 220);
+      background-image: url("/photos/stop.png");
+      background-position: center right;
+      background-repeat: no-repeat;
+}
+
+#schoolOne
+{
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+}
+
+#schoolOne table > tr > td
+{
+    vertical-align: -5%;
+}
+
+#schoolTwo
+{
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+}
+
+#schoolTwo table > tr > td
+{
+    vertical-align: -5%;
+}
+
+#schoolThree
+{
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+}
+
+#schoolThree table > tr > td
+{
+    vertical-align: -5%;
+}
+
+.faded
+{
+    opacity: 0.70;
+}
+
+.title
+{
+    text-align: center;
+}
+
+.github
+{
+    border: 2px solid white;
+}
+
+.inverse
+{
+    background-color: #202020;
+    color: white;
+}
+
+#skillsImg
+{
+    width: 50%;
+    height: 50%;
+    opacity: 0.6;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px)
+{
+    .mediaCheck
+    {
+        width: 10px;
+    }
+}
+
+@media screen and (min-width: 601px)
+{
+    .mediaCheck
+    {
+        width: 20px;
+    }
+}
+
+fieldset > div > label
+{
+    width: 400px;
+}
+
+.padded-btn
+{
+    padding-top: 5px;
+}
+
+.financial-header
+{
+    font-family: 'Dollar Bill';
 }

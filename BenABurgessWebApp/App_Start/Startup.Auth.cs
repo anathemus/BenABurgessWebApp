@@ -55,14 +55,14 @@ namespace BenABurgessWebApp
             //   consumerSecret: "");
 
             //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            //   appId: "638852886506500",
+            //   appSecret: "06a59957914aae3a9365742cae4949d8");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "953871450148-1fnnuor3qiecnuaorbkd8ljiu9kqnnlb.apps.googleusercontent.com",
+                ClientSecret = "LmMMOMp6P1Rw5XUsrv2L2MYV"
+            });
         }
     }
 }

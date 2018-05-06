@@ -1,31 +1,124 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Benjamin's Bio";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <!-- Jumbotron from Bootstrap, displays profile pic, name and title -->
+    <div class="jumbotron">
+        <div class="container">
+            <img src="~/Content/Photos/professional.jpg" class="rounded" />
+            <br />
+            <br />
+            <p class="bio-p">Benjamin Burgess</p>
+            <p class="bio-p">Software Developer, MCSE</p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="container-fluid">
+        <!-- Row of columns -->
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <content class="container">
+                    <h2 class="header-bold">Beginnings</h2>
+                    <a href="https://www.nh.gov" target="_blank">
+                        <img src="~/Content/Photos/New-Hampshire-Flag-US-State-Wood-XL.jpg"
+                         class="img-fluid mx-auto d-block" />
+                    </a>
+                    <br />
+                    <p class="bio-p">
+                        I was born and raised in the Granite State, New Hampshire. From the age of 6 I have lived a life
+                        that has had close ties with technology and computing. In my youth I programmed and played with
+                        code in BASIC.
+                    </p>
+                </content>
+                <br />
+                <content class="container">
+                    <a href="http://www.pixsoriginadventures.co.uk/king-kong-chris-roberts-first-game/" target="_blank">
+                        <img src="~/Content/Photos/kingkong3.png" class="img-fluid mx-auto d-block" />
+                    </a>
+                    <br />
+                    <p class="bio-p">
+                        I remember a game similar to, if not the exact one,
+                        <a href="http://www.pixsoriginadventures.co.uk/king-kong-chris-roberts-first-game/" target="_blank">
+                            pictured above <i class="fa fa-search"></i>
+                        </a>. It was written in BASIC and distributed via
+                        shareware floppy disks at a flea market. The game was tough, so I went in and edited the code to
+                        make it easier to beat by editing the GOTO commands.
+                    </p>
+                </content>
+                <br />
+                <content class="container">
+                    <h2 class="header-bold">High School</h2>
+                    <a href="http://www.hopkintonschools.org/middlehighschool/" target="_blank">
+                        <img src="~/Content/Photos/seal.jpg"
+                             class="img-fluid mx-auto d-block" />
+                    </a>
+                    <br />
+                    <p class="bio-p">
+                        I continued to learn programming in the advanced computer science classes at Hopkinton High School,
+                        located in Contoocook, New Hampshire. Here, I learned Novell Networking and created a paint
+                        program in Pascal. My knowledge and thirst for programming grew.
+                    </p>
+                </content>
+                <br />
+                <content class="container">
+                    <h2 class="header-bold">Present Day</h2>
+                    <a href="http://www.snhu.edu" target="_blank">
+                        <img src="~/Content/Photos/southern-new-hampshire-university-penmen.jpg"
+                             class="img-fluid mx-auto d-block" />
+                    </a>
+                    <br />
+                    <p class="bio-p">
+                        Currently I study at Southern New Hampshire University, College of Continuing Education. The
+                        online courses help greatly with my balance of full-time work, studies, fatherhood, and life. I am
+                        majoring in Information Technology with a concentration in software development. I am a nominee of
+                        the National Society of Success and Leadership, expecting to become a full member soon. My current
+                        GPA is a 3.304, and this semester I am at an A in my class. I expect to complete my
+                        studies in September 2018.
+                    </p>
+                </content>
+                <br />
+                <content class="container">
+                    <h4 class="header-bold">LaunchCode</h4>
+                    <a href="https://www.launchcode.org" target="_blank">
+                        <img src="~/Content/Photos/LaunchCode_Logo.png"
+                             class="img-fluid mx-auto d-block" />
+                    </a>
+                    <br />
+                    <p class="bio-p">
+                        Towards the end of May 2015, I found LaunchCode, a helpful non-profit who helps place those that
+                        have knowledge and skill with less experience in apprenticeships that 90% of the time turn into
+                        full time careers. This is me more than anything else I've ever done in my life. I applied, and
+                        successfully answered their Hacker Rank puzzle questions in C#. I have been a LaunchCode candidate
+                        since September 2015 and am currently seeking an apprenticeship in web frontend and/or iOS. As I
+                        seek this opportunity, I continue to learn and grow as a programmer in the confident hope that I
+                        will one day be a career developer.
+                    </p>
+                </content>
+                <br />
+                <content class="container">
+                    <h4 class="header-bold">Harvard CS50</h4>
+                    <a href="https://courses.edx.org/courses/HarvardX/CS50x3/2015/info" target="_blank">
+                        <img src="~/Content/Photos/Harvard_Logo.png" class="img-fluid mx-auto d-block" />
+                    </a>
+                    <br />
+                    <p class="bio-p">
+                        After teaching myself C# through Microsoft's virtual academy, my mentor at LaunchCode suggested I go
+                        for a Harvard CS50 certification. The deadline for the course at the local Miami-Dade College had
+                        already passed, so I found that there was an online version available at anytime. CS50 was a great,
+                        fun and facinating challenge. Starting from the basics, the class advanced rapidly using the C
+                        language through bit manipulation, data recovery/forensics, hash tables, binary trees, even the
+                        creation of a basic apache server program. The last few weeks, we dove into HTML, CSS, PHP, SQL,
+                        and JavaScript. Using JQuery, JSON, and Google's APIs, I created a mashup of Google Maps, and
+                        Google News, whereby when the user dragged the map, pins would appear in towns which would have a
+                        list of news links for that town.<br /><br />My CS50 certificate is available for viewing <a href="https://courses.edx.org/certificates/add60d7d72054a0db7809343d5a6d28a"
+                                                                                                                     target="_blank">
+                            here <i class="fa fa-search"></i>
+                        </a>.
+                    </p>
+                </content>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>

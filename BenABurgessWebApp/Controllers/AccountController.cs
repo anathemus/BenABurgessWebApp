@@ -54,6 +54,7 @@ namespace BenABurgessWebApp.Controllers
 
         //
         // GET: /Account/Login
+        [RequireHttps]
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
@@ -63,6 +64,7 @@ namespace BenABurgessWebApp.Controllers
 
         //
         // POST: /Account/Login
+        [RequireHttps]
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]

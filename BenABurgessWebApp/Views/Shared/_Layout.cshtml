@@ -3,42 +3,61 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @{
+        String context = ViewContext.RouteData.Values["Action"].ToString();
+    }
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/Content/Custom.css" />
+    <link rel="icon" href="~/favicon.ico" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            @Html.ActionLink("Benjamin Burgess", "Index", "Home", new { area = "" }, new { @class = "navbar-brand brand" })
+            <button type="button" class="navbar-toggler hidden-md-up btn-dark" data-toggle="collapse" data-target="#mainNavBar">
+                <span class="dos-menu">MENU</span>
+            </button>
+            <div id="mainNavBar" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item @(context == "Index" ? "active" : "")">@Html.ActionLink("Bio", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item @(context == "Skills" ? "active" : "")">@Html.ActionLink("Skills", "Skills", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item dropdown @(context == "Projects" ? "active" : "")">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Projects
+                        </a>
+                        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
+                            @Html.ActionLink("Put It Down", "Projects", "Home", null, null, "PutItDown", null, new { @class = "dropdown-item" })
+                            @Html.ActionLink("c$50 Finance", "Projects", "Home", null, null, "CS50Finance", null, new { @class = "dropdown-item" })
+                        </div>
+                    </li>
+                    <li class="nav-item @(context == "Education" ? "active" : "")">@Html.ActionLink("Education", "Education", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item @(context == "Feedback" ? "active" : "")">@Html.ActionLink("Feedback", "Feedback", "Home", null, new { @class = "nav-link" })</li>
                 </ul>
+                <div class="dropdown-divider"></div>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
-    </div>
+    </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Benjamin Burgess' ASP.NET Application</p>
+            <div id="MCSASQL" class="logo"></div>
+            <div id="MCSEDMA" class="logo"></div>
+            <p>Microsoft is a registered trademark of Microsoft Corporation in the United States and other countries.</p>
+            <div class="mediaCheck"></div>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/Site.js"></script>
 </body>
 </html>
