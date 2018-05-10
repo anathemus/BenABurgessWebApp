@@ -35,7 +35,7 @@ namespace BenABurgessWebApp.Tests.Controllers
             ViewResult result = controller.Skills() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.AreEqual("Benjamin's Skills", result.ViewBag.Message);
         }
 
         [TestMethod]

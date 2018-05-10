@@ -47,12 +47,16 @@ namespace BenABurgessWebApp.Models
             //string currentUserName = db.Users.Find(user);
             //ApplicationUser currentUser = currentUserName;
             //string currentUserString = currentUser.ToString();
+            const string nullGuid = "00000000-0000-0000-0000-000000000000";
 
-            var transactionAccountUserId = from q in db.FinancialAccounts
+            IQueryable<Guid> transactionAccountUserId = from q in db.FinancialAccounts
                                            where q.UserName == user
                                            select q.TransactionsAccountId;
 
-            if (transactionAccountUserId != null)
+            string userId = transactionAccountUserId.SingleOrDefault().ToString();
+            // Console.WriteLine(userId);
+
+            if (userId != nullGuid)
             {
                 return true;
             }

@@ -25,7 +25,7 @@ namespace BenABurgessWebApp.Tests
 
             bool transactionsAccount = HasTransactionsAccount.HasTransactionAccount(genericUser); 
 
-            Assert.IsTrue(transactionsAccount);
+            Assert.IsFalse(transactionsAccount);
         }
     }
 }
