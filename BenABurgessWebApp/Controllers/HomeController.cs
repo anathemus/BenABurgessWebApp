@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using BenABurgessWebApp.Models;
 
-namespace BBWebApplication.Controllers
+namespace BenABurgessWebApp.Controllers
 {
     public class HomeController : Controller
     {

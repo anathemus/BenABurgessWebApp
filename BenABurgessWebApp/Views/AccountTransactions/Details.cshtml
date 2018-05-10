@@ -1,0 +1,82 @@
+﻿@model BenABurgessWebApp.Models.AccountTransaction
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AccountTransaction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancialAccount.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinancialAccount.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Symbol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Symbol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shares)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shares)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceAtPurchase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceAtPurchase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalAtPurchase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalAtPurchase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceAtSale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceAtSale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalAtSale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalAtSale)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TransactionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

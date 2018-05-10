@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -20,6 +21,7 @@ namespace BenABurgessWebApp.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -29,5 +31,9 @@ namespace BenABurgessWebApp.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BenABurgessWebApp.Models.AccountTransaction> AccountTransactions { get; set; }
+
+        public System.Data.Entity.DbSet<BenABurgessWebApp.Models.FinancialAccount> FinancialAccounts { get; set; }
     }
 }

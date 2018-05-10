@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44344</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -88,6 +88,8 @@
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -202,18 +204,19 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\FinancialController.cs" />
+    <Compile Include="Controllers\AccountTransactionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccountTransaction.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\DAL\FinancialContext.cs" />
     <Compile Include="Models\EmailModel.cs" />
-    <Compile Include="Models\Financial.cs" />
+    <Compile Include="Models\FinancialAccount.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Financial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -376,16 +379,16 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Financial\Create.cshtml" />
-    <Content Include="Views\Financial\Delete.cshtml" />
-    <Content Include="Views\Financial\Details.cshtml" />
-    <Content Include="Views\Financial\Edit.cshtml" />
-    <Content Include="Views\Financial\Index.cshtml" />
     <Content Include="Views\Home\Education.cshtml" />
     <Content Include="Views\Home\Feedback.cshtml" />
     <Content Include="Views\Home\PrivacyPolicy.cshtml" />
     <Content Include="Views\Home\Projects.cshtml" />
     <Content Include="Views\Home\Skills.cshtml" />
+    <Content Include="Views\AccountTransactions\Create.cshtml" />
+    <Content Include="Views\AccountTransactions\Delete.cshtml" />
+    <Content Include="Views\AccountTransactions\Details.cshtml" />
+    <Content Include="Views\AccountTransactions\Edit.cshtml" />
+    <Content Include="Views\AccountTransactions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

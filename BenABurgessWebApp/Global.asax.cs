@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
 
 namespace BenABurgessWebApp
 {
@@ -18,6 +19,9 @@ namespace BenABurgessWebApp
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // Sets Database to be dropped and recreated if the model changes
+            Database.SetInitializer(new ApplicationDbInitializer());
         }
     }
 }

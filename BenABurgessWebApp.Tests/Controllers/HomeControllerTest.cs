@@ -26,26 +26,26 @@ namespace BenABurgessWebApp.Tests.Controllers
         }
 
         [TestMethod]
-        public void About()
+        public void Skills()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
+            ViewResult result = controller.Skills() as ViewResult;
 
             // Assert
             Assert.AreEqual("Your application description page.", result.ViewBag.Message);
         }
 
         [TestMethod]
-        public void Contact()
+        public void Projects()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Contact() as ViewResult;
+            ViewResult result = controller.Projects() as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
