@@ -55,6 +55,11 @@ namespace BenABurgessWebApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                string currentUser = User.Identity.GetUserName();
+                if (!HasTransactionsAccount.HasTransactionAccount(currentUser))
+                {
+                    accountTransaction.TransactionsAccountId = Guid.NewGuid();
+                }
                 accountTransaction.TransactionId = Guid.NewGuid();
                 db.AccountTransactions.Add(accountTransaction);
                 await db.SaveChangesAsync();
