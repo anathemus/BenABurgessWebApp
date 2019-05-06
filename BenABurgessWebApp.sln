@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenABurgessWebApp", "BenABu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenABurgessWebApp.Tests", "BenABurgessWebApp.Tests\BenABurgessWebApp.Tests.csproj", "{A988B041-C029-465A-A78D-FC4DDE4C413E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWeather", "..\..\OpenWeather\OpenWeather\OpenWeather.csproj", "{20BB9D2C-8016-4A45-BCD7-51826333CB78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A988B041-C029-465A-A78D-FC4DDE4C413E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A988B041-C029-465A-A78D-FC4DDE4C413E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A988B041-C029-465A-A78D-FC4DDE4C413E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20BB9D2C-8016-4A45-BCD7-51826333CB78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20BB9D2C-8016-4A45-BCD7-51826333CB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20BB9D2C-8016-4A45-BCD7-51826333CB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20BB9D2C-8016-4A45-BCD7-51826333CB78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

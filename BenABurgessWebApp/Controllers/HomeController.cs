@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Mvc.Html;
+﻿using System.Web.Mvc;
 using System.Text;
 using System.Threading;
 using BenABurgessWebApp.Models;
+using System.Threading.Tasks;
+using OpenWeather.Controllers;
 
 namespace BenABurgessWebApp.Controllers
 {
@@ -77,6 +74,12 @@ namespace BenABurgessWebApp.Controllers
             ViewBag.Message = "Privacy Policy";
 
             return View();
+        }
+        public async Task<ActionResult> Weather()
+        {
+            WeatherController controller = new WeatherController();
+            ActionResult weatherAction = await controller.Weather();
+            return weatherAction;
         }
     }
 }

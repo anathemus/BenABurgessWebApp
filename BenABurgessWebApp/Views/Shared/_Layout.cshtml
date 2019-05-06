@@ -31,6 +31,7 @@
                             Projects
                         </a>
                         <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
+                            @Html.ActionLink("Weather", "Weather", "Home", null, new { @class = "dropdown-item" })
                             @Html.ActionLink("Put It Down", "Projects", "Home", null, null, "PutItDown", null, new { @class = "dropdown-item" })
                             @Html.ActionLink("c$50 Finance", "Projects", "Home", null, null, "CS50Finance", null, new { @class = "dropdown-item" })
                         </div>
